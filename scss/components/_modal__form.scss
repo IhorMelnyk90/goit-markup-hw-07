@@ -1,0 +1,142 @@
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+.modal__form--head {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+.modal__form--field {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  color: var(--general-text-color);
+}
+.modal__form--field.margin {
+  margin-bottom: 10px;
+}
+
+.modal__form--field.margin--2 {
+  margin-bottom: 20px;
+}
+
+.modal__form--wraper {
+  display: block;
+  position: relative;
+  margin-top: 4px;
+}
+
+.modal__form--input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--delay-time) var(--cubic-1);
+
+  &:focus {
+    outline: none;
+    border-color: var(--fist-text-color);
+    transition: border-color var(--delay-time) var(--cubic-1);
+  }
+}
+
+.modal__form--icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  transition: fill var(--delay-time) var(--cubic-1);
+
+  &:focus + .modal__form--icon {
+    fill: var(--fist-text-color);
+    transition: fill var(--delay-time) var(--cubic-1);
+  }
+}
+
+.modal__form--message {
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  transition: border-color var(--delay-time) var(--cubic-1);
+
+  &:focus {
+    outline: none;
+    border-color: var(--fist-text-color);
+    transition: border-color var(--delay-time) var(--cubic-1);
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal__form--accept {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  color: var(--general-text-color);
+
+  &::before {
+    display: block;
+    margin-right: 8px;
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--second-text-color);
+    cursor: pointer;
+    border-radius: 2px;
+  }
+}
+
+.modal__form--checkbox:checked + .modal__form--accept::before {
+  background-color: var(--fist-text-color);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: url(../images/Vector.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  border: 1px solid var(--fist-text-color);
+
+  &:focus + .modal__form--accept::before {
+    outline: 2px solid var(--second-background-color);
+  }
+}
+
+.modal__form--acceptlink:hover,
+.modal__form--acceptlink:focus {
+  color: var(--fist-text-color);
+  text-decoration-line: underline;
+}
+
+.modal__form--sendbutton {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--fist-text-color);
+  color: var(--third-text-color);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}

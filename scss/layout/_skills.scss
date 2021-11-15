@@ -1,0 +1,49 @@
+.skills {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.skills__list {
+  display: flex;
+}
+
+.skills__item {
+  width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.skills__icon--wrap {
+  display: flex;
+  min-height: 120px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--team-background-color);
+}
+
+.skills__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.skills__title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  color: var(--second-text-color);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+.skills__info {
+  color: var(--general-text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,46 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--second-background-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.info {
+  margin-right: 70px;
+}
+
+.info__adress {
+  margin-bottom: 9px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--third-text-color);
+}
+
+.info__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.info__mailtel {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+  color: var(--footer-nav-text-color);
+  transition: color var(--delay-time) var(--cubic-1);
+
+  &:hover,
+  &:focus {
+    color: var(--fist-text-color);
+    transition: color var(--delay-time) var(--cubic-1);
+  }
+}

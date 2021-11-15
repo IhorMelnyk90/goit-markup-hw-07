@@ -1,0 +1,141 @@
+/*---------------------------Портфолио фильтр---------------------------*/
+
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filter {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter .filter__item + .filter__item {
+  margin-left: 8px;
+}
+
+.filter__button--active {
+  padding: 6px 22px;
+  background-color: var(--fist-text-color);
+  color: var(--third-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.filter__button {
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+  transition: color var(--delay-time) var(--cubic-1),
+    background-color var(--delay-time) var(--cubic-1),
+    box-shadow var(--delay-time) var(--cubic-1);
+
+  &:hover,
+  &:focus {
+    color: var(--third-text-color);
+    background-color: var(--fist-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: color var(--delay-time) var(--cubic-1),
+      background-color var(--delay-time) var(--cubic-1),
+      box-shadow var(--delay-time) var(--cubic-1);
+  }
+}
+
+/*---------------------------Портфолио---------------------------*/
+
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.portfolio__item {
+  width: 370px;
+  margin-top: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+  background-color: var(--third-text-color);
+  box-sizing: border-box;
+  transition: box-shadow var(--delay-time) var(--cubic-1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow var(--delay-time) var(--cubic-1);
+  }
+}
+
+.portfolio__link {
+  display: block;
+  transition: box-shadow var(--delay-time) var(--cubic-1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: box-shadow var(--delay-time) var(--cubic-1);
+  }
+
+  &:hover .portfolio__img--text,
+  &:focus .portfolio__img--text {
+    transform: translateY(-100%);
+    transition: transform var(--delay-time) var(--cubic-1);
+  }
+}
+
+.portfolio__img--text {
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--third-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform var(--delay-time) var(--cubic-1);
+}
+
+.portfolio__link--wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/*---------------------------Елементи списка портфолио---------------------------*/
+
+.project {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  text-align: left;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+}
+
+.project__title {
+  color: var(--second-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project__text {
+  color: var(--general-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}

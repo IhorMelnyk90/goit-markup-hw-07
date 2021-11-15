@@ -1,0 +1,105 @@
+.header {
+  background-color: var(--third-text-color);
+  border-bottom: 1px solid;
+  color: #ececec;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 305px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu__link {
+  display: block;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+  transition: color var(--delay-time) var(--cubic-1);
+
+  &:hover,
+  &:focus {
+    color: var(--fist-text-color);
+    transition: color var(--delay-time) var(--cubic-1);
+  }
+}
+
+.menu__link--current {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--fist-text-color);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--fist-text-color);
+    transform: scaleX(1);
+  }
+}
+
+/*---------------------------Контакты---------------------------*/
+
+.contacts {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71px;
+  color: var(--general-text-color);
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color var(--delay-time) var(--cubic-1);
+
+  &:hover,
+  &:focus {
+    transition: color var(--delay-time) var(--cubic-1);
+    color: var(--fist-text-color);
+  }
+
+  &:hover .contacts__icon,
+  &:focus .contacts__icon {
+    fill: var(--fist-text-color);
+    transition: fill var(--delay-time) var(--cubic-1);
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: var(--general-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
+}
